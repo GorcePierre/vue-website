@@ -1,6 +1,6 @@
-# vue-website
+# test
 
-> The vue-website website
+> The test website
 
 ## Build Setup
 
