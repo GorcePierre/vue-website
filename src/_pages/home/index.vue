@@ -1,13 +1,7 @@
 <template>
 <div class="main">
     <div class= "headerBlock">
-        <section class="docPath">
-            <p>Documentation
-                <span class="rightArrow">
-                    <img src=/src/assets/objet-dynamique-vectoriel.png >
-                </span>
-            </p>
-        </section>
+        <doc-arrowed></doc-arrowed>
         <img-small-logo></img-small-logo>
         <img-logo></img-logo>
         <edited-block></edited-block>
@@ -15,12 +9,13 @@
         <edited-block2></edited-block2>
         <top-background></top-background>
     </div>
-        <body-block></body-block>
+    <body-block></body-block>
 </div>
   
 </template>
 <script>
 
+import DocArrowed from './_subs/DocArrowed.vue'
 import ImgSmallLogo from './_subs/ImgSmallLogo.vue'
 import ImgLogo from './_subs/ImgLogo.vue'
 import EditedBlock from './_subs/EditedBlock.vue'
@@ -31,6 +26,7 @@ import BodyBlock from './_subs/BodyBlock.vue'
 
 export default {
   components: {
+    DocArrowed,
     ImgSmallLogo,
     ImgLogo,
     EditedBlock,
@@ -58,19 +54,5 @@ export default {
 .headerBlock {
     position: relative;
     width: auto;
-}
-.docPath {
-    position: relative;
-    margin-left: 66px;
-    margin-top: 30px;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    z-index: 1;
-    cursor: pointer;
-}
-.rightArrow{
-    position: absolute;
-    margin-left: 10px;
 }
 </style>

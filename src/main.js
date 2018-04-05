@@ -4,8 +4,11 @@ import Vue from 'vue'
 import router from './router'
 import plugin from 'vue-website-plugins/vue'
 
+import ButtonVueWebSite from '@/components/ButtonVueWebSite.vue'
+
 Vue.config.productionTip = false
 Vue.use(plugin, {router})
+Vue.component('button-vue-website', ButtonVueWebSite)
 
 /* eslint-disable no-new */
 new Vue({

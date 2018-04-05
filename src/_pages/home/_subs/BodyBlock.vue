@@ -5,9 +5,7 @@
         <section class="thirdBackEffect">
             <article class="subThirdEffect"></article>
         </section>
-        <section class="docButton">
-        <button>Documentation</button>
-        </section>
+    <button-vue-website></button-vue-website>
     </div>
 </template>
 <script>
@@ -63,27 +61,6 @@ export default {
     transform: rotate(60deg);
     top: -37%;
     right: 36%;
-}
-.docButton {
-    position: relative;
-    top: -97%;
-    margin-left: 43%;
-    z-index: 10;
-}
-
-button{
-    padding: 20px 40px;
-    border:5px solid #42b883;
-    color: #42b883;
-    background-color: transparent;
-    font-weight: bold;
-    font-size: 25px;
-    border-radius: 2px;
-    cursor: pointer;
-}
-button:hover{
-    background-color:  #42b883;
-    color:#202e3c
 }
 </style>
 
