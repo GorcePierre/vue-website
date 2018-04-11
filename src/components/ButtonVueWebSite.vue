@@ -1,21 +1,25 @@
 <template>
     <div class="docButton">
-        <button>Documentation</button>
+        <button>{{content}}</button>
     </div>
 </template>
 <script>
 export default {
+  props: {
+    type: String,
+    content: ''
+  }
 }
 </script>
 <style>
 .docButton {
     position: relative;
-    top: -97%;
+    margin-bottom: 7%;
     margin-left: 43%;
     z-index: 10;
 }
 
-button{
+button {
     padding: 20px 40px;
     border:5px solid #42b883;
     color: #42b883;

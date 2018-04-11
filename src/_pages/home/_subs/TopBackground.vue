@@ -9,20 +9,22 @@ export default {
 }
 </script>
 <style>
-.imgBack {position:static;
+.imgBack {
+
+    margin: -967px 0px 0px -657px;
+    position: relative;
     background-image: url(/src/assets/QDSMoAMTYaZoXpcwBjsL__DSC0104-1.jpg);
-    height: 1850px;
-    width: auto;
-    margin: -1845px 0 0 -674px;
+    height: 1750px;
+    padding: -39px 6px 3px 54px;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 0;
-}
-.imgFilter {
+& .imgFilter {
     position: relative;
     background-color: black;
     opacity: 0.6;
-    height: 1850px;
+    height: 100%;
     width: 100%;
+}
 }
 </style>
