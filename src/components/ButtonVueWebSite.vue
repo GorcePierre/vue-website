@@ -12,27 +12,28 @@ export default {
 }
 </script>
 <style>
+@import '../commons';
 .docButton {
     position: relative;
     margin-bottom: 7%;
-    margin-left: 43%;
+    
     z-index: 10;
-}
 
-button {
-    padding: 20px 40px;
-    border:5px solid #42b883;
-    color: #42b883;
-    background-color: transparent;
-    font-weight: bold;
-    font-size: 25px;
-    border-radius: 2px;
-    cursor: pointer;
-}
-button:hover{
-    background-color:  #42b883;
-    color:#202e3c
-}
+    & button {
+        padding: 20px 40px;
+        border:5px solid var(--vue-green);
+        color:var(--vue-green);
+        background-color: transparent;
+        font-weight: bold;
+        font-size: 25px;
+        border-radius: 2px;
+        cursor: pointer;
+    }
 
+    & button:hover{
+        background-color:  var(--vue-green);
+        color: var(--dark-blue)
+    }
+}
 </style>
 

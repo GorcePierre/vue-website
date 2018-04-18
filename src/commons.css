@@ -1,0 +1,13 @@
+:root {
+    @custom-media --medium (width > 530px);
+    @custom-media --medium-plus (width >= 830px);
+    @custom-media --large (width >= 1024px);
+    @custom-media --xlarge ( width >= 1440px);
+    @custom-media --xlarge-plus (width >=1770px);
+    --dark-blue: #202e3c;
+    --light-blue: #35495e;
+    --vue-green: #42b883;
+    --white-text: #FFFFFF;
+    --color-border:#FFFFFF;
+    --black-text: #000000
+}
