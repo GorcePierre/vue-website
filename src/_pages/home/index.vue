@@ -5,8 +5,13 @@
     <img-logo></img-logo>
     <top-background></top-background>
     <body-block></body-block>
-    <block v-for="(block, index) of blocks" :key="(block, index)" :data="block" ></block>
-    <button-vue-website :content="msg" class="docButton" ></button-vue-website>
+    <block v-for="(block, index) of blocks" 
+    :key="(block, index)" 
+    :data="block" 
+    @animated="startAnimation"
+    @resetAnimated="resetAnimation" >
+    </block>
+    <button-vue-website :content="msg" class="docButton"></button-vue-website>
   </div>
 </template>
 <script>
@@ -27,24 +32,27 @@ export default {
           article:
             'Stop writing big files containing all code, no more jQuery.Use simple declarative components.',
           image: '/src/assets/firstArticlePicture.png',
-          animatedImage: '/src/assets/firstArticlePicture.png',
-          style: 'case1'
+          animatedImage: '/src/assets/animatedPicture1.png',
+          spec: 'case1',
+          isAnimated: false
         },
         {
           title: 'UNIFIED LANGUAGE',
           article:
             'You don\'t need to code your site on the one hand and use a static site generator on the second hand. You code it once in components and it works.',
           image: '/src/assets/secondArticlePicture.png',
-          animatedImage: '/src/assets/secondArticlePicture.png',
-          style: 'case2'
+          animatedImage: '/src/assets/animatedPicture2.png',
+          spec: 'case2',
+          isAnimated: false
         },
         {
           title: 'STATIC AND REACTIVE',
           article:
             'Pages are static so they are fast and SEO ready. But you benefit from single page applications features,\n like html5 history navigation.',
           image: '/src/assets/thirdArticlePicture.png',
-          animatedImage: '/src/assets/thirdArticlePicture.png',
-          style: 'case3'
+          animatedImage: '/src/assets/animatedPicture3.png',
+          spec: 'case3',
+          isAnimated: false
         }
       ]
     }
@@ -56,6 +64,30 @@ export default {
     Block,
     TopBackground,
     BodyBlock
+  },
+  methods: {
+    startAnimation () {
+      if (window.scrollY > 300) {
+        this.blocks[0].isAnimated = true
+      }
+      if (window.scrollY > 700) {
+        this.blocks[1].isAnimated = true
+      }
+      if (window.scrollY > 1000) {
+        this.blocks[2].isAnimated = true
+      }
+    },
+    resetAnimation () {
+      if (window.scrollY <= 300) {
+        this.blocks[0].isAnimated = false
+      }
+      if (window.scrollY <= 700) {
+        this.blocks[1].isAnimated = false
+      }
+      if (window.scrollY <= 1000) {
+        this.blocks[2].isAnimated = false
+      }
+    }
   }
 }
 </script>
@@ -81,12 +113,13 @@ export default {
         margin-top: -24px;  
       }
     & .docButton {
-      margin-top: -250px;
+      margin-top: -228px;
       right: -13%;
       @media  (width >= 411px) and (width <= 530px) {
           right:-17%;
       }
       @media (--medium) {
+
         right: -25%;
       }
       @media  (width >= 681px) and (width <= 831px) {
@@ -96,18 +129,16 @@ export default {
           right:-33%;
       }
       @media (--large) {
-        top:-1390px;
+        top:-1378px;
         right:-36%
       }
       @media (--xlarge) {
-        top:-1355px;
         right:-41% 
       }
       @media (--xlarge-plus) {
-        margin-top: -150px;  
+        top:-1278px
       }
   }
 
 }
-
 </style>
